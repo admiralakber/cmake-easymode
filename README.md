@@ -24,11 +24,14 @@ unit tests, is git aware, include vendored/external libraries, and
 can provide extensions to Python or CERN ROOT. It can be installed,
 packaged, and easily integrated into other CMake projects.
 
+For an example project see [cmake-easymode-example github
+repository](https://github.com/admiralakber/cmake-easymode-example).
+
 FEATURE TOGGLES
 ```
-  BUILD_DOC    - Requires Doxygen
-  SWIG_PYTHON  - Requires SWIG and PythonLibs
-  CERN_ROOT    - Requires CERN ROOT
+  BUILD_DOC    - Requires Doxygen (Default ON)
+  SWIG_PYTHON  - Requires SWIG and PythonLibs (Default OFF)
+  CERN_ROOT    - Requires CERN ROOT (Default OFF)
 ```
 The minimum complete example of an Easy Mode Project is as follows.
 
@@ -46,7 +49,7 @@ project.cc
  ├── extern
  │   ├── Catch2                 [example / recommended]
  │   │   └── ...
- │   └── CMakeLists.txt         [add_library(extern_Folder INTERFACE]
+ │   └── CMakeLists.txt         [add_library(extern_Folder INTERFACE)]
  ├── src
  │   ├── app1
  │   │   ├── main.cc

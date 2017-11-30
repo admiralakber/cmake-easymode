@@ -26,6 +26,9 @@
 # can provide extensions to Python or CERN ROOT. It can be installed,
 # packaged, and easily integrated into other CMake projects.
 #
+# For an example project see [cmake-easymode-example github
+# repository](https://github.com/admiralakber/cmake-easymode-example).
+#
 # FEATURE TOGGLES
 #
 #   BUILD_DOC    - Requires Doxygen
@@ -47,7 +50,7 @@
 #  ├── extern
 #  │   ├── Catch2                 [example / recommended]
 #  │   │   └── ...
-#  │   └── CMakeLists.txt         [add_library(extern_Folder INTERFACE]
+#  │   └── CMakeLists.txt         [add_library(extern_Folder INTERFACE)]
 #  ├── src
 #  │   ├── app1
 #  │   │   ├── main.cc

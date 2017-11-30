@@ -140,8 +140,8 @@ Appends to variables
 
 Installs unit as a component given by {as} into directories as
 defined during project initialization. It also exports the unit
-into the file {EZ_INSTALL_DATADIR}/cmake/{unitname}-config.cmake
-This way ussers should be able to use find_package(fullunitname)
+into the file ```{EZ_INSTALL_DATADIR}/cmake/{unitname}-config.cmake```
+This way ussers should be able to use ```find_package(fullunitname)```
 to import just a single library out of a project.
 
 Also see:

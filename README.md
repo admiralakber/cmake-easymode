@@ -8,6 +8,7 @@ Copyright (C) 2017-2018 Aqeel Akber <email@aqeel.cc>
 ##        ##         #     # #     # #     # #       
 ######## ########    #     # ####### ######  ####### 
 ```
+**If the best practice isn't the easiest, it's a bug.**
 
 ## EASYMODE C++ BEST PRACTICE BOILERPLATE CMAKE PROJECT 
 #### Author: Aqeel Akber <email@aqeel.cc>

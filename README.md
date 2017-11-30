@@ -25,11 +25,11 @@ can provide extensions to Python or CERN ROOT. It can be installed,
 packaged, and easily integrated into other CMake projects.
 
 FEATURE TOGGLES
-
+```
   BUILD_DOC    - Requires Doxygen
   SWIG_PYTHON  - Requires SWIG and PythonLibs
   CERN_ROOT    - Requires CERN ROOT
-
+```
 The minimum complete example of an Easy Mode Project is as follows.
 
 ```
@@ -77,7 +77,7 @@ described in detail below.
 This macro does the following:
 
 Defines the following variables
-
+```
   EZ_PROJ_VER
   GIT_REVISION
   EZ_INSTALL_BINDIR
@@ -86,39 +86,39 @@ Defines the following variables
   EZ_INSTALL_DATADIR
   EZ_INSTALL_DOCDIR
  {EZ_PROJ_VER}_INCLUDE_DIRS
-
+```
 Defines the following global properties:
-
+```
   EZ_PROJ_LIBS - List of libraries that get EZ installed.
   EZ_PROJ_APPS - List of applications that get  EZ installed.
-
+```
 Runs find_package for the following (Optional) packages and creates
 a feature toggle where appropriate:
-
+```
   Git     - Variable [GIT_REVISION]
   Doxygen - Option   [BUILD_DOC - Default ON]
   SWIG    - Option   [SWIG_PYTHON - Default OFF]
   ROOT    - Option   [CERN_ROOT - Default OFF]
-
+```
 ### EASY MODE UNIT INTIALIZATION.
 ```ez_unit_init()```
 This macro does the following:
 
 Defines the following variables
-
+```
   EZ_THIS_UNIT_NAME               - pulled from the folder name
   EZ_THIS_UNIT_NAME_FULL          - {PROJECT_NAME}_{EZ_THIS_UNIT_NAME}
   EZ_THIS_UNIT_HEADERS            - list
   EZ_THIS_UNIT_SOURCES            - list
  {EZ_THIS_UNIT_NAME_FULL}_HEADERS - list
  {EZ_THIS_UNIT_NAME_FULL}_SOURCES - list
-
+```
 ### EZ MODE UNIT ADD HEADER(SOURCE)
 ```ez_unit_add_header(unitname filename)```
 This macro does the following:
 
 Appends to variables
- {filename} to {unitname}_HEADERS
+ ```{filename} to {unitname}_HEADERS```
 
 Also see:
   ```ez_this_unit_add_header(filename)```
@@ -136,7 +136,7 @@ Also see:
 This macro does the following:
 
 Appends to variables
- {unitname} to EZ_PROJ_{upper(as)} - These get exported with project
+ ```{unitname} to EZ_PROJ_{upper(as)} - These get exported with project```
 
 Installs unit as a component given by {as} into directories as
 defined during project initialization. It also exports the unit
@@ -151,12 +151,12 @@ Also see:
 ```ez_export_project()```
 This macro does the following:
 
-Iterates over EZ_PROJ_LIBS and EZ_PROJ_APPS
+Iterates over ```EZ_PROJ_LIBS``` and ```EZ_PROJ_APPS```
 Populates it with the above units exported config files.
-${EZ_PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}-config.cmake
+```${EZ_PROJECT_BINARY_DIR}/cmake/${PROJECT_NAME}-config.cmake```
 And installs the above total project config file.
 
-This enables the end user to use find_package({PROJECT_NAME})
+This enables the end user to use ```find_package({PROJECT_NAME})```
 and it'll be equivalent to including every installed library
 individually.
 

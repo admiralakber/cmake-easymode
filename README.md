@@ -13,18 +13,20 @@ Copyright (C) 2017-2018 Aqeel Akber <email@aqeel.cc>
 #### Author: Aqeel Akber <email@aqeel.cc>
 
 This CMake Module provides a series of macros will make all your
-CMakeLists.txt files look almost identical and contain very little
--- if you follow the EasyMode Project structure, the idea being the
-structure is best practice.  At this stage, the focus is on
-development for GNU/Linux operating systems. This is constantly
-evolving, your suggestions are absolutely most welcome.
+CMakeLists.txt files look almost identical and contain very little --
+if you follow the EasyMode Project structure, the idea being the
+structure is best practice. At this stage, the focus is on development
+for GNU/Linux operating systems.
+
+This is constantly evolving, your suggestions are absolutely most
+welcome. Help make the best practice be the easiest practice.
 
 An EasyMode C++ Project is highly modular, contains documentation,
-unit tests, is git aware, include vendored/external libraries, and
-can provide extensions to Python or CERN ROOT. It can be installed,
+unit tests, is git aware, include vendored/external libraries, and can
+provide extensions to Python or CERN ROOT. It can be installed,
 packaged, and easily integrated into other CMake projects.
 
-For an example project see [cmake-easymode-example github
+For a minimal example project see [cmake-easymode-example github
 repository](https://github.com/admiralakber/cmake-easymode-example).
 
 FEATURE TOGGLES

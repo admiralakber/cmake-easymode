@@ -125,11 +125,11 @@ Also see:
   ```ez_unit_add_source(unitname filename)```
 
 ### EZ MODE THIS UNIT ADD HEADER(SOURCE)
-# ```ez_this_unit_add_header(filename)```
-# This macro calls: ez_unit_add_header assuming name is of this unit.
-#
-# Also see:
-#   ez_this_unit_add_source(filelname)
+```ez_this_unit_add_header(filename)```
+This macro calls: ez_unit_add_header assuming name is of this unit.
+
+Also see:
+  ez_this_unit_add_source(filelname)
 
 ### EZ MODE INSTALL UNIT
 ```ez_install_unit(unitname as)```

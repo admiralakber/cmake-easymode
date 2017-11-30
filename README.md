@@ -26,8 +26,8 @@ unit tests, is git aware, include vendored/external libraries, and can
 provide extensions to Python or CERN ROOT. It can be installed,
 packaged, and easily integrated into other CMake projects.
 
-For a minimal example project see [cmake-easymode-example github
-repository](https://github.com/admiralakber/cmake-easymode-example).
+**For a minimal example project see [cmake-easymode-example github
+repository](https://github.com/admiralakber/cmake-easymode-example).**
 
 FEATURE TOGGLES
 ```

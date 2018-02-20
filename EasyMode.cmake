@@ -217,6 +217,7 @@ macro(ez_proj_init)
   # ----------------------------------------
   set(${EZ_PROJ_VER}_INCLUDE_DIRS
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>
+    $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}/src>
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/extern>
     $<INSTALL_INTERFACE:${EZ_INSTALL_INCDIR}>
     )
@@ -229,7 +230,7 @@ macro(ez_proj_init)
   # intentionally to sane defaults / best
   # practice.
   # ----------------------------------------
-  option(BUILD_DOC "Build API documentation (requires Doxygen)" "ON")
+  option(BUILD_DOC "Build API documentation (requires Doxygen)" "OFF")
 
   if (BUILD_DOC)
     message("${BoldMagenta}[ EasyMode :: Doxygen ]${ColourReset}")

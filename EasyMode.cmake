@@ -306,7 +306,7 @@ macro(ez_proj_init)
       message(FATAL_ERROR "${BoldRed}Can not find Boost libraries. Are they installed?${ColourReset}")
     endif()
     message(STATUS "Found Boost: ${Boost_INCLUDE_DIRS} (found version ${Boost_VERSION})")
-    include(${Boost_USE_FILE})
+    #include(${Boost_USE_FILE})
     set(${EZ_PROJ_VER}_INCLUDE_DIRS ${${EZ_PROJ_VER}_INCLUDE_DIRS} $<BUILD_INTERFACE:${Boost_INCLUDE_DIRS}>)
   endif()
   

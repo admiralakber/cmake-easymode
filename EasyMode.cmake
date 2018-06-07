@@ -132,6 +132,7 @@ endif()
 #   Doxygen - Option   [BUILD_DOC - Default ON]
 #   SWIG    - Option   [SWIG_PYTHON - Default OFF]
 #   ROOT    - Option   [CERN_ROOT - Default OFF]
+#   BOOST   - Option   [BOOST_LIBS - Default OFF]
 #
 macro(ez_proj_init)
   # PREREQUISITES
@@ -287,6 +288,26 @@ macro(ez_proj_init)
     message(STATUS "Found ROOT: ${ROOT_INCLUDE_DIRS} (found version ${ROOT_VERSION})")
     include(${ROOT_USE_FILE})
     set(${EZ_PROJ_VER}_INCLUDE_DIRS ${${EZ_PROJ_VER}_INCLUDE_DIRS} $<BUILD_INTERFACE:${ROOT_INCLUDE_DIRS}>)
+  endif()
+
+  # BOOST LIBS - Peer Reviewed C++ Libraries
+  # ----------------------------------------
+  # Include ROOT libraries and generate
+  # ROOT dictionaries for use at the ROOT
+  # interpreter.
+  # ----------------------------------------
+  option(BOOST_LIBS "Enable using of Boost C++ Libraries" "OFF")
+
+  if (BOOST_LIBS)
+    message("${BoldMagenta}[ EasyMode :: Boost C++ Libraries ]${ColourReset}")
+    set(Boost_USE_MULTITHREADED ON)
+    find_package(Boost)
+    if (NOT Boost_FOUND)
+      message(FATAL_ERROR "${BoldRed}Can not find Boost libraries. Are they installed?${ColourReset}")
+    endif()
+    message(STATUS "Found Boost: ${Boost_INCLUDE_DIRS} (found version ${Boost_VERSION})")
+    include(${Boost_USE_FILE})
+    set(${EZ_PROJ_VER}_INCLUDE_DIRS ${${EZ_PROJ_VER}_INCLUDE_DIRS} $<BUILD_INTERFACE:${Boost_INCLUDE_DIRS}>)
   endif()
   
   # FINISHING UP

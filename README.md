@@ -1,3 +1,7 @@
+# This is legacy code is now depreciated
+### Start transitioning to https://github.com/thaum0/ezmode
+
+
 Copyright (C) 2017-2018 Aqeel Akber <email@aqeel.cc>
 ```
 ######## ########    #     # ####### ######  ####### 

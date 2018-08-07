@@ -1,5 +1,5 @@
 # This is legacy code is now depreciated
-### Start transitioning to https://github.com/thaum0/ezmode
+### Start transitioning to https://github.com/thaum0/ezmake
 
 
 Copyright (C) 2017-2018 Aqeel Akber <email@aqeel.cc>
